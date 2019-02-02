@@ -32,6 +32,13 @@ public class LoginTest {
         Assert.assertTrue(driver.getTitle().equals("Web Orders"));
     }
 
+    @Test
+    public void logoutTest() {
+        loginTest1();
+        driver.findElement(By.id("ctl00_logout")).click();
+        Assert.assertTrue(driver.getTitle().equals("Web Orders Login"));
+    }
+
     @AfterMethod
     public void cleanUp(){
         driver.close();
