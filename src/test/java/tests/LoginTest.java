@@ -11,12 +11,15 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 //Login tests are maintaned
 //Try untracked file and modified file merge
 public class LoginTest {
 
     WebDriver driver;
+    Map<String, String> myMap = new HashMap<>();
 
     @BeforeMethod
     public void setUp(){
